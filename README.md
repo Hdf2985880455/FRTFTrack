@@ -47,7 +47,11 @@ The reliability estimation module estimates the reliability of the current predi
 
 ## Results
 
-FRTFTrack is evaluated on TNL2K, LaSOT, and OTB99-Lang under full-data and low-shot training settings. Compared with MMTrack, FRTFTrack maintains comparable performance under full-data training and achieves more pronounced improvements under low-shot training.
+FRTFTrack is evaluated on TNL2K, LaSOT, and OTB99-Lang under both full-data and low-shot training settings.
+
+Under the full-data training setting, FRTFTrack maintains performance comparable to MMTrack while introducing only lightweight reliability-aware feedback modules. Under low-shot training settings, FRTFTrack achieves more pronounced improvements, showing better data efficiency when training samples are limited.
+
+### Low-shot AUC comparison
 
 | Setting | Dataset | MMTrack AUC | FRTFTrack AUC | Gain |
 |---|---:|---:|---:|---:|
@@ -57,6 +61,17 @@ FRTFTrack is evaluated on TNL2K, LaSOT, and OTB99-Lang under full-data and low-s
 | 1/3 samples | TNL2K | 51.0 | 53.9 | +2.9 |
 | 1/3 samples | LaSOT | 65.0 | 67.6 | +2.6 |
 | 1/3 samples | OTB99-Lang | 67.0 | 69.0 | +2.0 |
+
+### Low-shot ablation on AUC
+
+| Method | TNL2K | LaSOT | OTB99-Lang |
+|---|---:|---:|---:|
+| Baseline | 49.6 | 62.8 | 65.2 |
+| +RE | 49.2 | 61.7 | 65.4 |
+| +RE+FTQM | 51.5 | 64.7 | 68.7 |
+| +RE+FTQM+RSU | 51.7 | 64.9 | 68.7 |
+
+The ablation results show that RE alone mainly provides an auxiliary reliability signal, while the closed feedback loop formed by RE, FTQM, and RSU brings more consistent improvements under low-shot training.
 
 ## Paper
 
