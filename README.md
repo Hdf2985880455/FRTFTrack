@@ -1,4 +1,4 @@
-```markdown
+
 # FRTFTrack: Reliability-Aware Temporal Feedback for Data-Efficient Vision-Language Tracking
 
 This repository provides the project page for **FRTFTrack**, a reliability-aware temporal feedback framework for data-efficient vision-language tracking.
@@ -40,4 +40,4 @@ The reliability estimation module estimates the reliability of the current predi
 ## Code
 
 The code will be released upon acceptance.
-```
+
