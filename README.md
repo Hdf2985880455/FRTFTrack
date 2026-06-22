@@ -50,6 +50,10 @@ FRTFTrack is evaluated on TNL2K, LaSOT, and OTB99-Lang under full-data and low-s
 | 1/3 samples | LaSOT | 65.0 | 67.6 | +2.6 |
 | 1/3 samples | OTB99-Lang | 67.0 | 69.0 | +2.0 |
 
+## Paper
+
+The manuscript is currently under preparation.
+
 ## Citation
 
 The citation will be updated after publication.
