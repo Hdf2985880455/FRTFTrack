@@ -56,9 +56,7 @@ The citation will be updated after publication.
 
 ## Contact
 
-For questions about this project, please contact the authors.
-
-
+For questions about this project, please contact Tianpeng Liu at tpliu@wtu.edu.cn.
 
 ## Code
 
