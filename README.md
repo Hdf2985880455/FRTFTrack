@@ -17,19 +17,27 @@ The goal of FRTFTrack is to improve tracking stability and data efficiency under
 
 ![FRTFTrack Framework](figures/fig01.png)
 
+**Figure 1. Overall framework of FRTFTrack.** FRTFTrack is built upon MMTrack and introduces a reliability-aware temporal feedback loop. The estimated reliability is fed back to guide subsequent query modulation and state update, improving tracking stability under low-shot training settings.
+
 ## Main Components
 
 ### Reliability Estimation
 
 ![RE Module](figures/fig02.png)
 
+**Figure 2. Reliability Estimation (RE).** RE estimates the reliability of the current prediction from aggregated decoder-state features and sentence-level text semantics. The reliability score provides feedback signals for query modulation and state update.
+
 ### Fine-grained Text-guided Query Modulation
 
 ![FTQM Module](figures/fig03.png)
 
+**Figure 3. Fine-grained Text-guided Query Modulation (FTQM).** FTQM uses historical reliability to guide word-level text-token selection and generate a dynamic query residual. This module enhances language-aware query construction while controlling the influence of unreliable temporal states.
+
 ### Reliability-aware State Update
 
 ![RSU Module](figures/fig04.png)
+
+**Figure 4. Reliability-aware State Update (RSU).** RSU controls the final tracking state according to prediction reliability and motion variation. When reliability is low and motion is abnormal, conservative fusion is used to reduce error propagation.
 
 ## Method
 
@@ -52,7 +60,7 @@ FRTFTrack is evaluated on TNL2K, LaSOT, and OTB99-Lang under full-data and low-s
 
 ## Paper
 
-The manuscript is currently under preparation.
+The manuscript is currently under submission.
 
 ## Citation
 
